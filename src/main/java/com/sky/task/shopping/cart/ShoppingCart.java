@@ -23,7 +23,7 @@ public class ShoppingCart {
 				shoppingCartItems.stream()
 									  .mapToDouble(ShoppingCartItem::getDiscountedPrice)
 									  .sum());
-
+  
 	}
 
 }

@@ -42,6 +42,6 @@ public class ShoppingCartItem {
 	public String toString() {
 		return "ShoppingCartItem [item=" + item.getName() + ", quantity=" + quantity 
 		      + ", Price=" + getPrice() + ", discountedPrice=" + discountedPrice +"]";
-	}
+	} 
 	
 }
