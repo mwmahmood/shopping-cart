@@ -26,13 +26,13 @@ public class PricingService {
    Double getDiscountedPrice(ShoppingCartItem shoppingItem) {
 
       if (ItemType.AUDIO.equals(shoppingItem.getItem().getItemType())) {
-         return shoppingItem.getQuantity() * shoppingItem.getPrice() * (1 - DISCOUNT);
+         return shoppingItem.getQuantity() * shoppingItem.getItem().getPrice() * (1 - DISCOUNT);
       }
 
       if ("AAA Batteries".equals(shoppingItem.getItem().getName())) {
          Integer pricedQuantiry = shoppingItem.getQuantity() - shoppingItem.getQuantity() / 3;
-         return shoppingItem.getPrice() * pricedQuantiry;
+         return shoppingItem.getItem().getPrice() * pricedQuantiry;
       }
-      return shoppingItem.getPrice() * shoppingItem.getQuantity();
+      return shoppingItem.getItem().getPrice() * shoppingItem.getQuantity();
    }
 }
