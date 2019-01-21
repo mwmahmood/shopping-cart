@@ -25,6 +25,10 @@ public class ShoppingCartItem {
 	public Integer getQuantity() {
 		return quantity;
 	}
+	
+	public Double getPrice() {
+		return quantity * item.getPrice();
+	}
 
 	public Double getDiscountedPrice() {
 		return discountedPrice;
@@ -33,4 +37,11 @@ public class ShoppingCartItem {
 	public void setDiscountedPrice(Double discountedPrice) {
 		this.discountedPrice = discountedPrice;
 	}
+
+	@Override
+	public String toString() {
+		return "ShoppingCartItem [item=" + item.getName() + ", quantity=" + quantity 
+		      + ", Price=" + getPrice() + ", discountedPrice=" + discountedPrice +"]";
+	}
+	
 }
